@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,23 +46,46 @@
                                     <constraint firstAttribute="trailing" secondItem="xxQ-Wm-34F" secondAttribute="trailing" id="abb-fR-hh0"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="a0y-5W-WcG">
+                                <rect key="frame" x="0.0" y="121" width="320" height="320"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="K2g-hC-vNU"/>
+                                    <constraint firstAttribute="width" constant="320" id="Pmp-nq-4DC"/>
+                                    <constraint firstAttribute="width" secondItem="a0y-5W-WcG" secondAttribute="height" multiplier="1:1" id="jpQ-su-nY1"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fUk-V3-Zkn" appends="YES" id="6ie-s9-mUC"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eGB-av-221" secondAttribute="trailing" id="1xF-O2-VCT"/>
                             <constraint firstItem="eGB-av-221" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="93x-LW-2D7"/>
                             <constraint firstItem="eGB-av-221" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SZ1-ok-6EF"/>
+                            <constraint firstItem="a0y-5W-WcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dGH-s1-Q9p"/>
+                            <constraint firstItem="a0y-5W-WcG" firstAttribute="top" secondItem="eGB-av-221" secondAttribute="bottom" id="yu6-wG-c0w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="OhF-1k-9Ee" id="qyj-Bs-qIZ"/>
                         <outlet property="nameTextField" destination="xxQ-Wm-34F" id="df4-2Y-JoI"/>
+                        <outlet property="photoImageView" destination="a0y-5W-WcG" id="h0p-LD-tb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fUk-V3-Zkn">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="Ur8-XH-LCL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DefaultPhoto" width="540" height="540"/>
+    </resources>
 </document>
