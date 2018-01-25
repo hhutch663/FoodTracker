@@ -46,8 +46,8 @@
                                     <constraint firstAttribute="trailing" secondItem="xxQ-Wm-34F" secondAttribute="trailing" id="abb-fR-hh0"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="a0y-5W-WcG">
-                                <rect key="frame" x="0.0" y="121" width="320" height="320"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="a0y-5W-WcG">
+                                <rect key="frame" x="16" y="121" width="320" height="320"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="K2g-hC-vNU"/>
