@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // Handle the text field's user input through delegate callbacks.
         nameTextField.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             UIImage else {
                 fatalError("Expected a dictionary containing an image, but was provided with the following: \(info)")
         }
-      //Set photoImageView to display the selected image.
+        //Set photoImageView to display the selected image.
         
         photoImageView.image = selectedImage
         
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     //MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
-       //Hide the keyboard.
+        //Hide the keyboard.
         nameTextField.resignFirstResponder()
         
         //UIImagePickerController is a view controller that lets a user pick media from their photo library.

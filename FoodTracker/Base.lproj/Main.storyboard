@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="trailing" secondItem="xxQ-Wm-34F" secondAttribute="trailing" id="abb-fR-hh0"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="a0y-5W-WcG">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="a0y-5W-WcG">
                                 <rect key="frame" x="0.0" y="121" width="320" height="320"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -55,12 +55,20 @@
                                     <constraint firstAttribute="width" secondItem="a0y-5W-WcG" secondAttribute="height" multiplier="1:1" id="jpQ-su-nY1"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fUk-V3-Zkn" appends="YES" id="6ie-s9-mUC"/>
+                                    <outletCollection property="gestureRecognizers" destination="fUk-V3-Zkn" appends="YES" id="wXX-QD-Jr4"/>
                                 </connections>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C44-gJ-0Qr" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="449" width="275" height="110"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C44-gJ-0Qr" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="449" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="40" height="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,7 +90,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="fUk-V3-Zkn">
                     <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="Ur8-XH-LCL"/>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="ChL-Om-Fyj"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
